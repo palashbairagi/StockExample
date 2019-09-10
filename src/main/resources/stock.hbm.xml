@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "Stock" table = "STOCK_INFO">
+
+        <meta attribute = "class-description">
+            This class contains the stocks details.
+        </meta>
+
+        <id name = "symbol" column = "symbol" type = "string"/>
+        <property name = "name" column = "name" type = "string"/>
+        <property name = "price" column = "price" type = "double"/>
+
+    </class>
+
+    <class name = "Order" table = "Orders">
+
+        <meta attribute = "class-description">
+            This class contains the order details.
+        </meta>
+
+        <id name = "orderId" column = "order_id" type = "long"/>
+        <property name = "userId" column = "user_id" type = "long"/>
+        <property name = "stockSymbol" column = "string" type = "stock_symbol"/>
+        <property name="type" column="type" type="string"/>
+        <property name = "quantity" column = "quantity" type = "int"/>
+        <property name = "price" column = "price" type = "double"/>
+
+    </class>
+
+</hibernate-mapping>
